@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chatbot System UI</title>
+    <link rel="stylesheet" href="/frontend/styles.css" />
+  </head>
+  <body>
+    <div class="app-layout">
+      <aside class="sidebar">
+        <h1>Chatbot System</h1>
+        <p class="muted">ChatGPT-style interface</p>
+        <button id="new-chat-btn" class="btn secondary">+ New chat</button>
+        <div class="settings">
+          <label for="user-id">User ID</label>
+          <input id="user-id" type="text" value="web-user" />
+
+          <label for="system-prompt">System prompt</label>
+          <textarea id="system-prompt" rows="5">You are a helpful AI assistant. Provide clear, concise, and accurate answers.</textarea>
+
+          <label for="temperature">Temperature: <span id="temp-value">0.3</span></label>
+          <input id="temperature" type="range" min="0" max="1.5" step="0.1" value="0.3" />
+        </div>
+      </aside>
+
+      <main class="chat-shell">
+        <header class="chat-header">Chat</header>
+        <section id="chat-window" class="chat-window">
+          <div class="welcome">
+            <h2>How can I help you today?</h2>
+            <p>Ask questions, upload docs via API, and chat with memory.</p>
+          </div>
+        </section>
+
+        <footer class="composer-wrap">
+          <form id="chat-form" class="composer">
+            <textarea id="message-input" placeholder="Message Chatbot System..." rows="1" required></textarea>
+            <button id="send-btn" type="submit" class="btn primary">Send</button>
+          </form>
+        </footer>
+      </main>
+    </div>
+
+    <script src="/frontend/app.js"></script>
+  </body>
+</html>
